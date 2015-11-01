@@ -1,16 +1,26 @@
-<!DOCTYPE html>
-<html>
+<?php
+$this->headMeta()->appendHttpEquiv("Content-Type", "text/html;charset=utf-8");
+$this->headTitle()->setSeparator(" - ");
+$this->headTitle("BOB system");
+
+echo $this->doctype();
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>BOB System</title>
+	<?php echo $this->headMeta();
+	echo $this->headTitle(); ?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" media="screen" href="<?= $this->baseUrl();?>/css/style.css" />
+	<?php echo $this->headLink()->prependStylesheet($this->baseUrl()."/css/style.css"); ?>
 </head>
 
 <body>
 	<ul class="menu-navigation">
 		<li><a href="#">Catalog</a></li>
 			<ul>
-				<li><a href="#">PET</a></li>
+				<li><a href="<?php echo $this->url(
+						array("module"=>"bob",
+							"controller"=>"pet",
+							"action"=>"index")); ?>">PET</a></li>
 			</ul>
 		<li><a href="#">Content</a></li>
 		<ul>
@@ -19,6 +29,8 @@
 		<li><a href="#">System</a></li>
 		<li><a href="#">Logout</a></li>
 	</ul>
+
+	<h1><?php echo $this->escape($this->title); ?></h1>
 	<?php echo $this->layout()->content; ?>
 </body>
 </html>

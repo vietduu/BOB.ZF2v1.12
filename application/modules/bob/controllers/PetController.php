@@ -11,8 +11,21 @@ class Bob_PetController extends Zend_Controller_Action
     public function indexAction()
     {
         $this->view->mdate = date("M d Y - h:i:s");
+        $productType = new Application_Model_DbTable_ProductType();
+        $this->view->productType = $productType->fetchAll();
+    }
+
+    public function addAction()
+    {
+        // action body
     }
 
 
 }
+
+
+
+
+
+
 
