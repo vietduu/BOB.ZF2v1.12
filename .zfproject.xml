@@ -19,6 +19,20 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="ProductType"/>
+        </dbTableDirectory>
+      </modelsDirectory>
+      <modulesDirectory>
+        <moduleDirectory moduleName="C:/xampp/htdocs/BOB.ZF2v1.12/application/controller/bob">
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Pet">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+      <layoutsDirectory enabled="false"/>
       <modelsDirectory/>
       <modulesDirectory>
         <moduleDirectory moduleName="C:/xampp/htdocs/BOB.ZF2v1.12/application/controller/bob">
@@ -36,12 +50,23 @@
         </moduleDirectory>
         <moduleDirectory moduleName="bob">
           <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Pet">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="add"/>
+            </controllerFile>
+          </controllersDirectory>
           <controllersDirectory/>
           <formsDirectory enabled="false"/>
           <layoutsDirectory enabled="false"/>
           <modelsDirectory/>
           <servicesDirectory enabled="false"/>
           <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Pet">
+                <viewScriptFile forActionName="add"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
             <viewScriptsDirectory/>
             <viewHelpersDirectory/>
             <viewFiltersDirectory/>
@@ -95,6 +120,15 @@
             <testApplicationActionMethod forActionName="index"/>
           </testApplicationControllerFile>
         </testApplicationControllerDirectory>
+        <testApplicationModulesDirectory>
+          <testApplicationModuleDirectory forModuleName="bob">
+            <testApplicationControllerDirectory>
+              <testApplicationControllerFile forControllerName="Pet">
+                <testApplicationActionMethod forActionName="add"/>
+              </testApplicationControllerFile>
+            </testApplicationControllerDirectory>
+          </testApplicationModuleDirectory>
+        </testApplicationModulesDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory/>
     </testsDirectory>

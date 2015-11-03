@@ -1,5 +1,19 @@
-<br /><br />
 <div id="view-content">
 	<p>View script for controller <b>Pet</b> and script/action name <b>index</b></p>
 	<p><?php echo $this->mdate ?></p>
+	<?php
+	$this->title = "H? th?ng BOB";
+	$this->headTitle($this->title);
+?>
+	<table>
+
+	<?php
+		foreach($this->productType as $productType){ ?>
+			<tr>
+				<td><?php echo $productType->name; ?></td>
+			</tr>
+
+	<?php	}
+	?>
+	</table>
 </div>
