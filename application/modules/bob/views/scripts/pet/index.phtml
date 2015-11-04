@@ -2,7 +2,7 @@
 	<p>View script for controller <b>Pet</b> and script/action name <b>index</b></p>
 	<p><?php echo $this->mdate ?></p>
 	<?php
-	$this->title = "Product type";
+	$this->title = "Loại sản phẩm";
 	$this->headTitle($this->title);
 ?>
 	<table>
@@ -10,7 +10,7 @@
 	<?php
 		foreach($this->productType as $productType){ ?>
 			<tr>
-				<td><?php echo htmlspecialchars($productType->name, ENT_QUOTES,'UTF-8'); ?></td>
+				<td><?php echo $productType->name; ?></td>
 			</tr>
 
 	<?php	}
