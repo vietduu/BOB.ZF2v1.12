@@ -9,7 +9,6 @@ class Bob_PetControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
         parent::setUp();
     }
 
-<<<<<<< HEAD
     public function testAddAction()
     {
         $params = array('action' => 'add', 'controller' => 'Pet', 'module' => 'bob');
@@ -32,8 +31,3 @@ class Bob_PetControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
 
 
 
-=======
-
-}
-
->>>>>>> 1d0a7bc... add bob pet

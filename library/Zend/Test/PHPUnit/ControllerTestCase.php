@@ -34,6 +34,15 @@ require_once 'Zend/Session.php';
 /** @see Zend_Registry */
 require_once 'Zend/Registry.php';
 
+/** @see PHPUnit_Runner_Version */
+require_once 'PHPUnit/Runner/Version.php';
+
+/**
+ * Depending on version, include the proper PHPUnit support
+ * @see PHPUnit_Autoload
+ */
+require_once (version_compare(PHPUnit_Runner_Version::id(), '3.5.0', '>=')) ? 'PHPUnit/Autoload.php' : 'PHPUnit/Framework.php';
+
 /**
  * Functional testing scaffold for MVC applications
  *
