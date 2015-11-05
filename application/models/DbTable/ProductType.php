@@ -4,7 +4,7 @@ class Application_Model_DbTable_ProductType extends Zend_Db_Table_Abstract
 {
     protected $_name = 'product_type';
 
-    public function getProductType($id)
+ /*   public function getProductType($id)
     {
         $id = (int)$id;
         $row = $this->fetchRow('id = ' . $id);
@@ -31,6 +31,6 @@ class Application_Model_DbTable_ProductType extends Zend_Db_Table_Abstract
 
     public function deleteProductType($id){
         $this->delete('id = ' . (int)$id);
-    }
+    }*/
 }
 

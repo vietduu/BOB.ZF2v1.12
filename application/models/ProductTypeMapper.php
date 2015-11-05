@@ -1,17 +1,10 @@
 <?php
 
+use Application\Models\DbTable\ProductType;
+
 class Application_Model_ProductTypeMapper
 {
 	protected $_dbTable;
-
-	public function getDbTable()
-	{
-		if (null === $this->_dbTable){
-			$this->setDbTable("Application_Model_ProductType");
-		}
-
-		return $this->_dbTable;
-	}
 
 	public function setDbTable($dbTable)
 	{
@@ -19,15 +12,23 @@ class Application_Model_ProductTypeMapper
 			$dbTable = new $dbTable();
 		}
 
-		if (!dbTable instanceof Zend_Db_Table_Abstract){
+		if (!$dbTable instanceof Zend_Db_Table_Abstract){
 			throw new Exception("Invalid table gateway provided");
 		}
 
 		$this->_dbTable = $dbTable;
-		
+
 		return $this;
 	}
 
+	public function getDbTable()
+	{
+		if (null === $this->_dbTable){
+			$this->setDbTable("Application_Model_DbTable_ProductType");
+		}
+
+		return $this->_dbTable;
+	}
 	
 	public function save(Application_Model_ProductType $productType){
 		$data = array(
@@ -61,8 +62,8 @@ class Application_Model_ProductTypeMapper
 
 		foreach($result as $row){
 			$entry = new Application_Model_ProductType();
-			$entry->setId($row->getId())
-				  ->setName($row->getName());
+			$entry->setId($row->id)
+				  ->setName($row->name);
 			$entries[] = $entry;
 		}
 

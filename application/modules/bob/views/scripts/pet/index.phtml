@@ -8,12 +8,11 @@
 	<table>
 
 	<?php
-		foreach($this->productType as $productType){ ?>
+		foreach($this->productType as $productType): ?>
 			<tr>
-				<td><?php echo $productType->name; ?></td>
+				<td><?php echo $this->escape($productType->name); ?></td>
 			</tr>
 
-	<?php	}
-	?>
+	<?php endforeach ?>
 	</table>
 </div>
