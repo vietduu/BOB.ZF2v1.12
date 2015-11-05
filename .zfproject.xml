@@ -21,7 +21,13 @@
       <modelsDirectory>
         <dbTableDirectory>
           <dbTableFile dbTableName="ProductType"/>
+          <dbTableFile dbTableName="Invoice"/>
+          <dbTableFile dbTableName="GeneralProduct"/>
         </dbTableDirectory>
+        <modelFile modelName="ProductType"/>
+        <modelFile modelName="GeneralProduct"/>
+        <modelFile modelName="Invoice"/>
+        <modelFile modelName="ProductTypeMapper"/>
       </modelsDirectory>
       <modulesDirectory>
         <moduleDirectory moduleName="C:/xampp/htdocs/BOB.ZF2v1.12/application/controller/bob">
